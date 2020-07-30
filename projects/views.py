@@ -1,29 +1,24 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, Http404
 import datetime as dt
 
 # Create your views here.
 def welcome(request):
-    return HttpResponse('Welcome to Fred Ojures Projects')
+    return render(request, 'welcome.html')
 
 def project_of_day(request):
 	date = dt.date.today()
-	day = convert_dates(date)
+	return render(request, 'all_projects/today-project.html', {"date": date,})
 
-	html = f'''
-		<html>
-			<body>
-				<h1> Projet for {day} {date.day} - {date.month} - {date.year} </h1>
-			</body>
-		</html>
-		'''
-	return HttpResponse(html)
+def past_projects(request, past_date):
+	try:
+		date = dt.datetime.strptime(past_date, '%Y-%m-%d').date()
 
-def convert_dates(dates):
-	day_number = dt.date.weekday(dates)
+	except valueError:
+		raise Http404()
+		assertFalse
 
-	days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+	if date == dt.date.today():
+		return redirect(project_of_day)
 
-	#Returning the actual day of the week
-	day = days[day_number]
-	return day
+	return render(request, 'all_projects/past-project.html', {"date": date})
