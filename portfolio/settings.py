@@ -19,7 +19,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'projects',
     'bootstrap4',
     'projects.apps.ProjectsConfig',
     'django.contrib.admin',
