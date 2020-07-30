@@ -1,6 +1,6 @@
-# Watchlist Movie Review Site
+# Django Portfolio Web Site
 
-This is a Python Project that connects to https://www.movieapi.com to download movies from  around the world
+This is a Python Django Project that list all projects I have done and pushed to Github and Heroku Cloud
 
 ## Getting Started
 
@@ -15,11 +15,11 @@ Since this a python project, clone into your current machine and follow these st
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Working machine with:
 
-```
-Give examples
-```
+1. OS - Windows or Linux
+2. IDE - VSCode, Atom or Sublime Text
+
 
 ### Installing --
 
@@ -61,7 +61,7 @@ No coding style tests are applied
 To deploy, follow these steps:
 
 1. Clone from the repository to your local drive.
-2. Install Flask. You can follow the steps in https://timmyreilly.azurewebsites.net/python-flask-windows-development-environment-setup/
+2. Install Django. You can follow the steps in https://timmyreilly.azurewebsites.net/python-flask-windows-development-environment-setup/
 3. Activate Flask environmet
 4. Install Twitter Bootstrap, Google Fonts, Coolers 
 
